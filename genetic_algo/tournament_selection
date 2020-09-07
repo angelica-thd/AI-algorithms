@@ -1,0 +1,7 @@
+func tournament_selection(pop, k):
+best = null
+for i=1 to k
+    ind = pop[random(1, N)]
+    if (best == null) or fitness(ind) > fitness(best)
+        best = ind
+return best

@@ -1,0 +1,22 @@
+
+def HC(init):
+    current = init
+    expanded_states = 0
+    viewed_states = 0
+    while True:
+        next_states = current.possible_next_states()
+        if len(next_states) == 0:
+            break
+        else:
+            best_next_state = next_states[0]
+            for state in next_states:
+                if state.heuristicValue() > best_next_state.heuristicValue()
+                best_next_state = state
+            current = best_next_state
+            expanded_states +=1
+            viewed_states +=len(next_states)
+
+    print("expanded states number : ", expanded_states)
+    print("viewed states number : ", viewed_states)
+    print("final state colours : ", end="")
+    current_state.print_state()

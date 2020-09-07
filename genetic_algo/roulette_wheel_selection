@@ -1,0 +1,21 @@
+# choices = {chromosome: chromosome.fitness for chromosome in chromosomes}
+
+
+def weighted_random_choice(choices):
+    max = sum(choices.values())
+    pick = random.uniform(0, max)
+    current = 0
+    for key, value in choices.items():
+        current += value
+        if current > pick:
+            return key
+
+# takes an iterable of chromosomes instead of choices
+def weighted_random_choice(chromosomes):
+    max = sum(chromosome.fitness for chromosome in chromosomes)
+    pick = random.uniform(0, max)
+    current = 0
+    for chromosome in chromosomes:
+        current += chromosome.fitness
+        if current > pick:
+            return chromosome
