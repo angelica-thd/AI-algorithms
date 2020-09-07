@@ -1,0 +1,19 @@
+def MAX_value(s,a,b):
+    if terminal(s): return U(s)
+    V = -inf
+    for c in next_states(s):
+        Vnew = MIN_value(c,a,b)
+        if Vnew > V: V = Vnew
+        if Vnew >= b: return V
+        if Vnew > a: a= Vnew
+    return V
+
+def MIN_value(s,a,b):
+    if terminal(s): return U(s)
+    V = +inf
+    for c in next_states(s):
+        Vnew = MAX_value(c,a,b)
+        if Vnew < V: V = Vnew
+        if Vnew <= a: return V
+        if Vnew < b: a= Vnew
+    return V
