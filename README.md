@@ -16,7 +16,7 @@
   tournament selection psudocode
  
  heuristic algorithms:
-  A* flowchart
+  A* flowchart,
   Hill Climbing pseudocode, flowchart
   
 **maze solver with Branch and Bound
