@@ -1,6 +1,6 @@
 "# AI-algorithms" 
 
-2 playger game algorithms:
+2 player game algorithms:
   minimax (pseudo)code, flowchart
   minimax with AB pruning pseudocode, python code
   
